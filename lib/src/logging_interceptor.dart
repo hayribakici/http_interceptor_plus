@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 
 /// A custom HTTP client with logging capabilities.
-class LoggingMiddleware with http.BaseClient {
+class LoggingMiddleware implements http.Client {
   final http.Client _inner;
 
   final Logger _logger = Logger();
